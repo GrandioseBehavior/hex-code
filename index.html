@@ -15,16 +15,16 @@
             place-items: center;
             height: 100vh;
             font-size: 20px;
+			font-family: "Pixelify Sans", sans;
         }     
         .main {
-            height: 400px;
-            width: 250px;
+            height: 300px;
+            width: 200px;
             background: #000;
             border-radius: 10px;
             display: grid;
             place-items: center;
             color: #fff;
-            font-family: "Pixelify Sans", sans;
             border-radius: 15px;
         }       
         #colorPicker {
@@ -32,27 +32,28 @@
             outline: none;
             border: none;
             height: 40px;
-            width: 60px;
-            cursor: pointer;
+            width: 100px;
+            cursor: crosshair;
         }       
         #box {
             outline: none;
-            border: 2px solid #333;
-            border-radius: 50px;
+            border: 2px solid #44ff00;
+            border-radius: 20px;
             height: 40px;
-            width: 120px;
+            width: 100px;
             padding: 0 10px;
+			
         }
   </style>
 </head>
 <body>
  <div class="main">
-        <!-- To select the color -->
+ 
         Color Picker: <input type="color"
             id="colorPicker" value="#6a5acd">
- 
-        <!-- To display hex code of the color -->
+			
         Hex Code: <input type="text" id="box">
+		
     </div>
   <script>
         function myColor() {
