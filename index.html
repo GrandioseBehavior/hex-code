@@ -4,22 +4,15 @@
   <title>Hex Color Picker</title>
   <style>
     body {
+          body {
       font-family: Arial, sans-serif;
       text-align: center;
-    }
-
-    #color-picker {
-      display: inline-block;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
     }
 
     #color-display {
       width: 100px;
       height: 100px;
-      background-color: #000;
-      margin: 10px auto;
+      margin: 20px auto;
       border: 1px solid #333;
     }
         .rounded-block {
@@ -32,24 +25,19 @@
 </head>
 <body>
     <div class="rounded-block">
-  <div id="color-picker">
-    <label for="color-input">Hex Color Code: </label>
-    <input type="text" id="color-input" value="#000000">
-    <button id="pick-button">Pick Color</button>
-  </div>
+  <h1>Hex Code Generator</h1>
 
   <div id="color-display"></div>
-    </div>
+  
+  <button id="generate-button">Generate Hex Code</button>
+   </div>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const colorInput = document.getElementById("color-input");
-      const colorDisplay = document.getElementById("color-display");
-      const pickButton = document.getElementById("pick-button");
+    const colorDisplay = document.getElementById("color-display");
+    const generateButton = document.getElementById("generate-button");
 
-      pickButton.addEventListener("click", function() {
-        const hexColor = colorInput.value;
-        colorDisplay.style.backgroundColor = hexColor;
-      });
+    generateButton.addEventListener("click", function() {
+      const randomHexColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+      colorDisplay.style.backgroundColor = randomHexColor;
     });
   </script>
 </body>
