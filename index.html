@@ -22,9 +22,16 @@
       margin: 10px auto;
       border: 1px solid #333;
     }
+        .rounded-block {
+      width: 200px;
+      height: 200px;
+      background-color: #000;
+      border-radius: 20px;
+      margin: 0 auto;
   </style>
 </head>
 <body>
+    <div class="rounded-block">
   <div id="color-picker">
     <label for="color-input">Hex Color Code: </label>
     <input type="text" id="color-input" value="#000000">
@@ -32,7 +39,7 @@
   </div>
 
   <div id="color-display"></div>
-
+    </div>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const colorInput = document.getElementById("color-input");
