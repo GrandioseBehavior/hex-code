@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hex Color Picker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    #color-picker {
+      display: inline-block;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #color-display {
+      width: 100px;
+      height: 100px;
+      background-color: #000;
+      margin: 10px auto;
+      border: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <div id="color-picker">
+    <label for="color-input">Hex Color Code: </label>
+    <input type="text" id="color-input" value="#000000">
+    <button id="pick-button">Pick Color</button>
+  </div>
+
+  <div id="color-display"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const colorInput = document.getElementById("color-input");
+      const colorDisplay = document.getElementById("color-display");
+      const pickButton = document.getElementById("pick-button");
+
+      pickButton.addEventListener("click", function() {
+        const hexColor = colorInput.value;
+        colorDisplay.style.backgroundColor = hexColor;
+      });
+    });
+  </script>
+</body>
+</html>
