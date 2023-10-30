@@ -3,7 +3,7 @@
 <head>
   <!-- Google Fonts -->
         <link
-            href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Jura&family=Pixelify+Sans&display=swap"
             rel="stylesheet"
         />
   <title>Hex Color Picker</title>
@@ -15,34 +15,42 @@
             place-items: center;
             height: 100vh;
             font-size: 20px;
-			font-family: "Pixelify Sans", sans;
+			font-family: "Jura", sans serif;
+            place-content: center;
+            cursor: url(cursor.cur), default;
+
         }     
         .main {
-            height: 300px;
-            width: 200px;
+            height: 100%;
+            width: 100%;
             background: #000;
-            border-radius: 10px;
+			border: 2px solid #44ff00;
+            border-radius: 15px;
             display: grid;
             place-items: center;
             color: #fff;
-            border-radius: 15px;
+            place-content: center;
+            row-gap: 15px;
+            padding: 15px 15px;
+
+			
         }       
         #colorPicker {
             background-color: none;
             outline: none;
             border: none;
-            height: 40px;
-            width: 100px;
-            cursor: crosshair;
+            height: 50px;
+            width: 50px;
+            cursor: cell;
         }       
         #box {
             outline: none;
             border: 2px solid #44ff00;
-            border-radius: 20px;
-            height: 40px;
-            width: 100px;
-            padding: 0 10px;
-			
+            border-radius: 10px;
+            height: 30px;
+            width: 60px;
+            padding:0 5px;
+			text-align: center;
         }
   </style>
 </head>
@@ -50,7 +58,7 @@
  <div class="main">
  
         Color Picker: <input type="color"
-            id="colorPicker" value="#6a5acd">
+            id="colorPicker" value="#44ff00">
 			
         Hex Code: <input type="text" id="box">
 		
